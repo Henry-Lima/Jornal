@@ -11,14 +11,5 @@
         <h1 id="titulo">Nome do Jornal</h1>
         <img id="img" src="logout.png" alt="">
     </header>
-    <form action="validaCadastro.php" method="POST">
-         <label for="user">Login:</label>
-        <input type="text" name="user" id="user">
-
-
-        <label for="senha">Senha:</label>
-        <input type="text" name="senha" id="senha">
-        <input type="submit" value="Enviar">
-    </form>
 </body>
 </html>

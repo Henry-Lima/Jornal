@@ -1,0 +1,52 @@
+header {
+    background-color: gray;
+}
+
+.cabecalho {
+    display: flex; 
+    justify-content: space-between;
+}
+
+#data {
+    margin-left: 10%;
+    margin-top: 5%;
+    font-weight: bold;
+}
+
+#escritor {
+    margin-top: 5%;
+    margin-right: 20%;
+    font-weight: bold;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 50px;
+}
+
+.manchete {
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 60px;
+}
+
+.div_resumo {
+    display: flex;
+    background-color: gray;
+    margin-right: 65%;
+    margin-top: 5%;
+    padding-bottom: 8%;
+    margin-left: 10%;
+}
+
+.texto {
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: 20px;
+}
+
+/* .elemento {
+    background-color: black;
+    width: 50%;
+    height: 0.1%;
+} */
