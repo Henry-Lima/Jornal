@@ -1,0 +1,41 @@
+body {
+    background-color: #FFFAFF;
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: -3%;
+}
+
+form {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    line-height: 25px;
+    margin-top: 5%;
+}
+
+label {
+    margin-top: 5%;
+}
+
+#btn {
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 10%;
+}
+
+#btn:hover {
+    color: #E5E5E5;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#img {
+    width: 3%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 3%;
+}
