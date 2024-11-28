@@ -36,7 +36,11 @@
         </div>
 
         <?php 
-            
+            session_start();
+            if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] != 'leitor') {
+                header('Location: index.php');
+                exit;
+            }
         ?>
     
 </body>

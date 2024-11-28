@@ -1,31 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <?php
-   $login = $_POST['login'];
-   $senha = $_POST['senha'];
-   $host = "localhost:3031";
-   $user = "root";
-   $pass = "";
-   $base = "jornal";
-   $conexao = mysqli_connect($host, $user, $pass, $base);
-   $sql = "select * from usuario where email = '$login' AND senha = '$senha'";
-   $resultado = mysqli_query($conexao, $sql);
+<?php
+// Dados do formulário
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+$tipo = $_POST['tipo_usuario'];
 
-   if ( mysqli_num_rows($resultado) > 0)
-   
-   {
-        echo "Acesso liberado";
-    }
-    else
-    {
-            echo "Acesso negado";
-        }
-  ?>
-</body>
-</html>
+// Conexão com o banco
+$host = "localhost";
+$user = "root";
+$pass = "";
+$base = "jornal";
+
+$conexao = new mysqli($host, $user, $pass, $base);
+
+// Verificando erros na conexão
+if ($conexao->connect_error) {
+    die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+}
+
+// Verificando se o email já existe
+$sqlVerifica = "SELECT * FROM login WHERE email = ?";
+$stmtVerifica = $conexao->prepare($sqlVerifica);
+$stmtVerifica->bind_param("s", $email);
+$stmtVerifica->execute();
+$resultado = $stmtVerifica->get_result();
+
+if ($resultado->num_rows > 0) {
+    echo "Erro: O email já está cadastrado.";
+    exit;
+}
+
+// Gerando o hash da senha
+$senhaHash = password_hash($senha, PASSWORD_BCRYPT);
+
+// Inserindo os dados no banco
+$sql = "INSERT INTO login (nome, email, senha, tipo) VALUES (?, ?, ?, ?)";
+$stmt = $conexao->prepare($sql);
+$stmt->bind_param("ssss", $nome, $email, $senhaHash, $tipo);
+
+if ($stmt->execute()) {
+    echo "Usuário cadastrado com sucesso!";
+} else {
+    echo "Erro ao cadastrar o usuário: " . $stmt->error;
+}
+
+// Fechando a conexão
+$stmt->close();
+$conexao->close();
+?>
