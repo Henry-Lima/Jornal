@@ -8,13 +8,13 @@
 <body>
   <?php
    $login = $_POST['login'];
-   $senhaAluno = $_POST['senha'];
-   $host = "localhost:3306";
+   $senha = $_POST['senha'];
+   $host = "localhost:3031";
    $user = "root";
    $pass = "";
-   $base = "usuarios";
+   $base = "jornal";
    $conexao = mysqli_connect($host, $user, $pass, $base);
-   $sql = "select * from login where email = '$login' AND senha = '$senha'";
+   $sql = "select * from usuario where email = '$login' AND senha = '$senha'";
    $resultado = mysqli_query($conexao, $sql);
 
    if ( mysqli_num_rows($resultado) > 0)
