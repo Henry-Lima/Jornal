@@ -9,9 +9,8 @@
 <body>
     <header class="cabecalho">
         <h1 id="titulo">Nome do Jornal</h1>
-        <img id="img" src="logout.png" alt="">
     </header>
-    <form action="validaCadastro.php" method="POST">
+    <form action="validaLogin.php" method="POST">
          <label for="user">Login:</label>
         <input type="text" name="user" id="user">
 

@@ -5,28 +5,57 @@ body {
 h1 {
     font-size: 60px;
     margin-top: 5%;
+    margin-left: 40%;
+}
+
+.logout-btn button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: end;
+    margin-left: 80%;
+    margin-top: -15%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.logout-btn button:hover {
+    background-color: #d32f2f; 
+    transform: scale(1.05);
+}
+
+.logout-btn button:focus {
+    outline: none;
+}
+
+.logout-btn button:active {
+    transform: scale(0.98); 
 }
 
 form {
-    background-color: gray; /* Fundo preto claro */
+    background-color: gray; 
     padding: 30px;      
     padding-right: 3%;
-    border: 1px solid #000000; /* Borda azul */
-    border-radius: 10px;      /* Bordas arredondadas */
+    border: 1px solid #000000; 
+    border-radius: 10px;    
     width: 100%;
-    max-width: 600px;         /* Largura máxima */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra externa */
+    max-width: 600px;        
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;                /* Espaçamento entre os elementos */
-    color: #f0f0f0;           /* Texto claro */
+    gap: 20px;                
+    color: #f0f0f0;           
 }
 
 /* Estilo das labels */
 form .label {
     font-weight: bold;
-    color: rgb(0, 0, 0)    ; /* Azul para destaque */
+    color: rgb(0, 0, 0)    ; 
     margin-bottom: 5px;
 }
 
@@ -34,22 +63,22 @@ form .label {
 form .input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ffffff; /* Borda azul */
+    border: 1px solid #ffffff; 
     border-radius: 5px;
-    background-color: #e0e0e0; /* Fundo preto interno */
-    color: #000000;            /* Texto claro */
-    font-size: 1rem;           /* Fonte padrão */
+    background-color: #e0e0e0; 
+    color: #000000;            
+    font-size: 1rem;           
 }
 
 form .input::placeholder {
-    color: #555; /* Placeholder em cinza */
+    color: #555; 
 }
 
 /* Estilo do campo de upload de imagem */
 form input[type="file"] {
     margin-top: 10px;
     font-size: 1rem;
-    color: #000000; /* Texto claro */
+    color: #000000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -60,15 +89,15 @@ form #btn {
     padding: 10px 50px;      
     font-size: 1rem;            
     background-color: green; 
-    color: #f0f0f0;            /* Texto branco */
-    font-weight: bold;         /* Texto em negrito */
+    color: #f0f0f0;            
+    font-weight: bold;         
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease; /* Efeitos no botão */
+    transition: background-color 0.2s ease, transform 0.2s ease; 
 }
 
 form #btn:hover {
-    background-color: rgb(3, 201, 3); /* Azul mais escuro ao passar o mouse */
-    transform: scale(1.05);    /* Aumenta ligeiramente o botão */
+    background-color: rgb(3, 201, 3); 
+    transform: scale(1.05);    
 }
