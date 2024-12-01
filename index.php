@@ -17,6 +17,7 @@
 
         <label for="senha">Senha:</label>
         <input type="text" name="senha" id="senha">
+        <a href="cadastro.html">Cadastre-se</a>
         <input type="submit" value="Enviar">
     </form>
 </body>
