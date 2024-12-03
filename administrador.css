@@ -21,6 +21,7 @@ header.cabecalho {
 #titulo {
     font-size: 24px;
     font-weight: bold;
+    color: red;
 }
 
 .logout-btn button {
@@ -51,7 +52,6 @@ header.cabecalho {
 h1 {
     text-align: center;
     margin-top: 20px;
-    color: #4CAF50;
     font-size: 30px;
 }
 
@@ -135,3 +135,9 @@ td a:last-child {
 td a:last-child:hover {
     background-color: #80101b;
 }   
+
+#n_mat_pend {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 35px;
+}

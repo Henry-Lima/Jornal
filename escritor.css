@@ -1,41 +1,48 @@
 body {
-    background-color: #FFFAFF;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+    color: #333; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Estilo do título no header */
+#titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
 }
 
 h1 {
-    font-size: 60px;
-    margin-top: 5%;
-    margin-left: 40%;
+    text-align: center;
+    margin-top: 2%;
+    color: red;
 }
 
+/* Estilo para o botão de logout */
 .logout-btn button {
-    background-color: #f44336;
+    background-color: #e74c3c;
     color: white;
     border: none;
-    padding: 12px 30px;
-    font-size: 18px;
+    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 30px;
-    display: inline-flex;
-    align-items: end;
-    margin-left: 80%;
-    margin-top: -15%;
-    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
 }
 
+/* Hover effect para o botão logout */
 .logout-btn button:hover {
-    background-color: #d32f2f; 
-    transform: scale(1.05);
+    background-color: #c0392b;
 }
-
-.logout-btn button:focus {
-    outline: none;
-}
-
-.logout-btn button:active {
-    transform: scale(0.98); 
-}
-
 form {
     background-color: gray; 
     padding: 30px;      

@@ -8,7 +8,10 @@
 </head>
 <body>
     <header class="cabecalho">
-        <h1 id="titulo">Nome do Jornal</h1>
+        <h1 id="titulo">Coringão Times</h1>
+        <a href="leitor.php" class="logout-btn">
+            <button type="button">Notícias</button>
+        </a>
         <a href="logout.php" class="logout-btn">
             <button type="button">Logout</button>
         </a>
@@ -33,7 +36,7 @@ if (!$conexao) {
     die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
 }
 
-$query = "SELECT * FROM materia WHERE status = 'pendente'";
+$query = "SELECT * FROM materia WHERE aprovado = 0";
 $resultado = mysqli_query($conexao, $query);
 
 echo "<h1>Matérias Pendentes</h1>";
@@ -63,7 +66,7 @@ if (mysqli_num_rows($resultado) > 0) {
     }
     echo "</table>";
 } else {
-    echo "<p>Não há matérias pendentes.</p>";
+    echo "<p id='n_mat_pend'>Não há matérias pendentes.</p>";
 }
 
 mysqli_close($conexao);

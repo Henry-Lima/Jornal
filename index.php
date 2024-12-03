@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="cabecalho">
-        <h1 id="titulo">Nome do Jornal</h1>
+<header class="cabecalho">
+        <h1 id="titulo">Coringão Times</h1>
     </header>
     <form action="validaLogin.php" method="POST">
          <label for="user">Login:</label>

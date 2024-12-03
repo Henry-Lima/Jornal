@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <a href="index.php"><img id="img" src="voltar.png" alt="Voltar"></a>
-        <h1>Criar Matéria</h1>
+    <header class="cabecalho">
+        <h1 id="titulo">Coringão Times</h1>
         <a href="logout.php" class="logout-btn">
             <button type="button">Logout</button>
         </a>

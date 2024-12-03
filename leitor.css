@@ -1,52 +1,122 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
 header {
-    background-color: gray;
-}
-
-.cabecalho {
-    display: flex; 
+    background-color: #222;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-#data {
-    margin-left: 10%;
-    margin-top: 5%;
-    font-weight: bold;
+header .cabecalho {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
 }
 
-#escritor {
-    margin-top: 5%;
-    margin-right: 20%;
-    font-weight: bold;
-}
-
-#titulo {
+header #titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
     text-align: center;
-    font-size: 50px;
+    flex-grow: 1;
+    color: red;
+}
+
+header .logout-btn {
+    background-color: #e63946;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header .logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Manchete */
+.manchete_div {
+    margin: 20px 0;
+    text-align: center;
 }
 
 .manchete {
-    margin-left: 10%;
-    margin-top: 10%;
-    font-size: 60px;
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
+/* Imagem */
+img {
+    max-width: 40%;
+    width: 25%;
+    height: auto;
+    float: right; 
+    margin: 20px; 
+    margin-right: 10%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Resumo */
 .div_resumo {
-    display: flex;
-    background-color: gray;
-    margin-right: 65%;
-    margin-top: 5%;
-    padding-bottom: 8%;
-    margin-left: 10%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 0;
+    margin-left: 5%;
+    width: 30%; 
+    height: 200px; 
+    float: left; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: justify;
+    overflow: hidden; 
 }
 
-.texto {
-    margin-top: 5%;
-    margin-left: 10%;
-    font-size: 20px;
+.div_resumo #resumo {
+    font-size: 14px;
+    color: #555;
+    text-overflow: ellipsis; 
+    overflow: hidden;
 }
 
-/* .elemento {
-    background-color: black;
-    width: 50%;
-    height: 0.1%;
-} */
+/* Texto principal */
+.texto p {
+    font-size: 24px;
+    text-align: justify;
+    color: #333;
+    margin-top: 16%;
+    margin-left: 2%; 
+    clear: none; 
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

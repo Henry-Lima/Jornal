@@ -51,9 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Inserção no banco de dados
     $query = "
-        INSERT INTO materia (data, nom_esc, manchete, res_mat, imagem, text_mat, status)
-        VALUES ('$data', '$nome', '$manchete', '$resumo', '$imagem', '$texto', 'pendente');
-    ";
+    INSERT INTO materia (data, nom_esc, manchete, res_mat, text_mat, imagem, aprovado)
+    VALUES ('$data', '$nome', '$manchete', '$resumo', '$texto', '$imagem', 0);
+";
     
     if (mysqli_query($conexao, $query)) {
         echo "<center><h1>Cadastro realizado. A matéria está aguardando aprovação.</h1></center>";

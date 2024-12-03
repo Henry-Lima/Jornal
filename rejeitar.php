@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     // Atualiza o status da matéria para "rejeitada"
-    $query = "UPDATE materia SET status = 'rejeitada' WHERE id = $id";
+    $query = "UPDATE materia SET aprovado = 0 WHERE id = $id";
     $result = mysqli_query($conexao, $query);
 
     if ($result) {
@@ -22,6 +22,8 @@ if (isset($_GET['id'])) {
         echo "Erro ao atualizar o status da matéria.";
     }
 }
+
+
 
 // Fecha a conexão com o banco de dados
 mysqli_close($conexao);
