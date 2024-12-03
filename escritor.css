@@ -6,43 +6,55 @@ body {
     padding: 0;
 }
 
-/* Estilo para o header */
-header {
+.cabecalho {
+    background-color: black; 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    color: white; 
 }
 
-/* Estilo do título no header */
 #titulo {
-    font-size: 24px;
-    font-weight: bold;
-    color: red;
+    font-size: 2rem;
+    color: red; 
+    margin: 0;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 2%;
-    color: red;
+.botao-container {
+    display: flex;
+    gap: 10px; 
+    margin-right: 50%;
 }
 
-/* Estilo para o botão de logout */
+.logout-btn {
+    text-decoration: none;
+}
+
 .logout-btn button {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white; 
+    background-color: #333333; 
+    border: 1px solid #555555; 
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Hover effect para o botão logout */
 .logout-btn button:hover {
-    background-color: #c0392b;
+    background-color: #555555; 
 }
+
+.noticias button {
+    background-color: #4CAF50; 
+}
+
+.noticias button:hover {
+    background-color: #45a049;
+}
+
 form {
     background-color: gray; 
     padding: 30px;      

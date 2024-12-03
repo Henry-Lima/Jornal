@@ -1,4 +1,3 @@
-/* Estilo geral */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,10 +7,27 @@ body {
     line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* Estilo para o botão de Voltar */
+.btn-voltar button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.btn-voltar button:hover {
+    background-color: #0056b3;
+}
+
+/* Cabeçalho antes das notícias */
 header {
-    background-color: #222;
-    color: #fff;
+    background-color: #333;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -21,18 +37,9 @@ header {
     z-index: 1000;
 }
 
-header .cabecalho {
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-}
-
-header #titulo {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    text-align: center;
-    flex-grow: 1;
-    color: red;
+header .btn-voltar {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 header .logout-btn {
@@ -51,6 +58,15 @@ header .logout-btn:hover {
     background-color: #d32f2f;
 }
 
+/* Cabeçalho das matérias */
+header #titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
+    flex-grow: 1;
+    color: red;
+}
+
 /* Manchete */
 .manchete_div {
     margin: 20px 0;
@@ -67,49 +83,74 @@ header .logout-btn:hover {
     padding-bottom: 10px;
 }
 
-/* Imagem */
-img {
-    max-width: 40%;
-    width: 25%;
-    height: auto;
-    float: right; 
-    margin: 20px; 
-    margin-right: 10%;
+/* Layout das notícias */
+.noticia-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 30px 5%;
+}
+
+.noticia {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 30%;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Resumo */
-.div_resumo {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    margin-bottom: 0;
-    margin-left: 5%;
-    width: 30%; 
-    height: 200px; 
-    float: left; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    text-align: justify;
-    overflow: hidden; 
+    transition: box-shadow 0.3s ease;
 }
 
-.div_resumo #resumo {
-    font-size: 14px;
-    color: #555;
-    text-overflow: ellipsis; 
-    overflow: hidden;
+.noticia:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Texto principal */
-.texto p {
-    font-size: 24px;
-    text-align: justify;
+.noticia img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.noticia .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #333;
-    margin-top: 16%;
-    margin-left: 2%; 
-    clear: none; 
+    margin: 10px 0;
+}
+
+.noticia .resumo {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.noticia .leitura-completa {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.noticia .leitura-completa:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes no layout da imagem e texto */
+.texto {
+    text-align: justify;
+    font-size: 16px;
+    color: #333;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30%;
 }
 
 /* Rodapé */

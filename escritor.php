@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <h1 id="titulo">Coringão Times</h1>
+<header class="cabecalho">
+    <h1 id="titulo">Coringão Times</h1>
+    <div class="botao-container">
+        <a href="leitor.php" class="logout-btn noticias">
+            <button type="button">Notícias</button>
+        </a>
+        
         <a href="logout.php" class="logout-btn">
             <button type="button">Logout</button>
         </a>
-    </header>
+    </div>
+</header>
 
     <form action="validaMateria.php" method="POST" enctype="multipart/form-data">
         <label class="label" for="data">Data:</label>

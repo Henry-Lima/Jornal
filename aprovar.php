@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     // Atualiza o status da matéria para "aprovada"
-    $query = "UPDATE materia SET aprovado = 1 WHERE id = $id";
+    $query = "UPDATE materia SET status = 1 WHERE id = $id";
     $result = mysqli_query($conexao, $query);
 
     if ($result) {
@@ -23,7 +23,7 @@ if (isset($_GET['id'])) {
     }
 }
 
-$query = "UPDATE materia SET aprovado = 1 WHERE id = $id";
+$query = "UPDATE materia SET status = 1 WHERE id = $id";
 
 mysqli_close($conexao);
 ?>

@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Inserção no banco de dados
     $query = "
-    INSERT INTO materia (data, nom_esc, manchete, res_mat, text_mat, imagem, aprovado)
+    INSERT INTO materia (data, nom_esc, manchete, res_mat, text_mat, imagem, status)
     VALUES ('$data', '$nome', '$manchete', '$resumo', '$texto', '$imagem', 0);
 ";
     

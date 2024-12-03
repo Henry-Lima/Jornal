@@ -4,14 +4,14 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    flex-direction: column; 
+    justify-content: flex-start; 
     height: 100vh;
 }
 
 header.cabecalho {
     display: flex;
-    justify-content: space-between;  /* Alinha o título à esquerda e o botão à direita */
+    justify-content: space-between;
     align-items: center;
     background-color: #333333;
     padding: 20px;
@@ -22,6 +22,11 @@ header.cabecalho {
     font-size: 24px;
     font-weight: bold;
     color: red;
+}
+
+.botao-container {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
 }
 
 .logout-btn button {
@@ -139,5 +144,5 @@ td a:last-child:hover {
 #n_mat_pend {
     text-align: center;
     margin-top: 10%;
-    font-size: 35px;
+    font-size: 3px;
 }

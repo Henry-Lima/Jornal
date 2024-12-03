@@ -7,17 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="cabecalho">
-        <h1 id="titulo">Coringão Times</h1>
+<header class="cabecalho">
+    <h1 id="titulo">Coringão Times</h1>
+    <div class="botao-container">
         <a href="leitor.php" class="logout-btn">
             <button type="button">Notícias</button>
         </a>
         <a href="logout.php" class="logout-btn">
             <button type="button">Logout</button>
         </a>
-    </header>
-
-    
+    </div>
+</header>
     
     <?php
 session_start();
@@ -36,7 +36,7 @@ if (!$conexao) {
     die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
 }
 
-$query = "SELECT * FROM materia WHERE aprovado = 0";
+$query = "SELECT * FROM materia WHERE status = 0";
 $resultado = mysqli_query($conexao, $query);
 
 echo "<h1>Matérias Pendentes</h1>";
