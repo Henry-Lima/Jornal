@@ -1,9 +1,15 @@
 <?php
 session_start(); // Iniciar a sessão
 
-// Dados do formulário
-$login = $_POST['user'];
-$senha = $_POST['senha'];
+// Dados do formulário (sanitize)
+$login = isset($_POST['user']) ? trim($_POST['user']) : ''; // Evitar dados nulos ou não definidos
+$senha = isset($_POST['senha']) ? trim($_POST['senha']) : ''; // Mesma coisa para a senha
+
+// Verificar se os dados foram fornecidos
+if (empty($login) || empty($senha)) {
+    header("Location: login.php?erro=campos");
+    exit;
+}
 
 // Conexão com o banco
 $host = "localhost";
@@ -18,10 +24,10 @@ if ($conexao->connect_error) {
     die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
 }
 
-// Verificando se o email e senha correspondem
+// Proteção contra SQL Injection (uso de prepared statements)
 $sql = "SELECT * FROM login WHERE email = ?";
 $stmt = $conexao->prepare($sql);
-$stmt->bind_param("s", $login);
+$stmt->bind_param("s", $login); // "s" para string (email)
 $stmt->execute();
 $resultado = $stmt->get_result();
 
@@ -44,10 +50,14 @@ if ($resultado->num_rows > 0) {
         }
         exit;
     } else {
-        echo "Senha incorreta!";
+        // Erro na senha
+        header("Location: login.php?erro=senha");
+        exit;
     }
 } else {
-    echo "Usuário não encontrado!";
+    // Erro no usuário (não encontrado)
+    header("Location: login.php?erro=usuario");
+    exit;
 }
 
 $stmt->close();

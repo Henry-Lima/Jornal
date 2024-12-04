@@ -7,7 +7,6 @@ if (!isset($_SESSION['tipo_usuario']) || !in_array($_SESSION['tipo_usuario'], ['
     header('Location: index.php');
     exit;
 }
-
 // Obtém o tipo de usuário da sessão
 $tipo_usuario = $_SESSION['tipo_usuario'];
 
@@ -38,7 +37,7 @@ $resultado = mysqli_query($conexao, $query);
 <body>
     <header>
     <a href="<?php echo ($tipo_usuario == 'administrador') ? 'administrador.php' : 'escritor.php'; ?>" class="btn-voltar">
-        <button type="button">Voltar para a Página Principal</button>
+        <button type="button">Voltar</button>
     </a>
     <a href='logout.php' class='logout-btn'>
         Logout
@@ -56,9 +55,9 @@ $resultado = mysqli_query($conexao, $query);
                 <header>
                     <div class='cabecalho'>
                         <p id='data'>Data: " . $row['data'] . "</p>
+                         <h1 id='titulo'>Coringão Times</h1>
                         <p id='escritor'>Nome do escritor: " . $row['nom_esc'] . "</p>
                     </div>
-                    <h1 id='titulo'>Coringão Times</h1>
                 </header>
                 <div class='manchete_div'>
                     <h2 class='manchete'>" . $row['manchete'] . "</h2>
